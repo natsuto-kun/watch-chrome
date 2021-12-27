@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "cannnot look chrome",
+    "short_name": "cannnot look chrome",
+    "version": "0.0.1",
+
+    "action": {
+        "default_icon": {
+            "19": "public/assets/favicon-sample.png"
+        },
+        "default_title": "sample popup",
+        "default_popup": "popup.html"
+    },
+    "default_locale": "ja_JP",
+    "description": "This is a Chrome extension that disables the display of pages with a specified URL.",
+    "icons": {
+        "16": "public/assets/avicon-sample.png"
+    }
+}

@@ -15,7 +15,7 @@
   "name": "watch-chrome",
   "version": "1.0.0",
   "description": "This is a Chrome extension that disables the display of pages with a specified URL.",
-  "main": "index.js",
+  "main": "popup.ts",
   "repository": "https://github.com/natsuto-kun/watch-chrome.git",
   "license": "MIT"
 }
