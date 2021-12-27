@@ -5,15 +5,12 @@
     "version": "0.0.1",
 
     "action": {
-        "default_icon": {
-            "19": "public/assets/favicon-sample.png"
-        },
+        "default_icon": "public/assets/favicon-sample.png",
         "default_title": "sample popup",
-        "default_popup": "popup.html"
+        "default_popup": "src/popup.html"
     },
-    "default_locale": "ja_JP",
     "description": "This is a Chrome extension that disables the display of pages with a specified URL.",
     "icons": {
-        "16": "public/assets/avicon-sample.png"
+        "16": "public/assets/favicon-sample.png"
     }
 }
