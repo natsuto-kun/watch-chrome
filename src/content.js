@@ -1,3 +1,3 @@
-if(alert("You Don't Look!")) {
+if(!alert("You Don't Look!")) {
     location.href = "http://abehiroshi.la.coocan.jp/";
 }
