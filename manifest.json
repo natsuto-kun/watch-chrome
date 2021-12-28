@@ -13,5 +13,11 @@
     "icons": {
         "16": "public/assets/favicon-sample.png"
     },
-    "permissions": ["tabs"]
+    "permissions": ["tabs", "activeTab"],
+    "content_scripts": [
+        {
+            "matches": ["https://twitter.com/home"],
+            "js": ["src/content.js"]
+        }
+    ]
 }
