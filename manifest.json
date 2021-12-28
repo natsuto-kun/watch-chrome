@@ -12,5 +12,6 @@
     "description": "This is a Chrome extension that disables the display of pages with a specified URL.",
     "icons": {
         "16": "public/assets/favicon-sample.png"
-    }
+    },
+    "permissions": ["tabs"]
 }
