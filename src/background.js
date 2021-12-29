@@ -3,10 +3,29 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
     sendResponse("uooo");
 
-    let selection;
     console.log(request);
+    console.log(request.tab);
+    const checkTab = request.tab;
 
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    if(saveTab === checkTab) {
+        console.log("win");
+        setTimeout(function(){
+            location.href = "http://abehiroshi.la.coocan.jp/";
+          }, 700);
+    }
+
+    return true
+});
+
+console.log("this is background")
+
+chrome.storage.local.get(['key'], function(result) {
+  console.log('Value currently is ' + result.key);
+  saveTab = result.key;
+});
+
+/*    
+chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         let tab = tabs[0].url + "*";
         console.log(tab);
         if(request.message == tab) {
@@ -17,15 +36,5 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         } else {
             selection = '';
         }
-    });
-    // sendResponse(selection);
-
-    return true
-});
-
-console.log("this is background")
-
-chrome.storage.local.get(['key'], function(result) {
-  console.log('Value currently is ' + result.key);
-});
-
+}); 
+*/
