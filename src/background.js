@@ -6,8 +6,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     console.log(request);
     console.log(request.tab);
     console.log(saveTab);
+    console.log(savePromise.key);
     const checkTab = request.tab;
-    if(saveTab === checkTab) {
+    if(savePromise.then(function(v) {
+        return v.key;
+    }) === checkTab) {
         console.log("win");
         setTimeout(function(){
             location.href = "http://abehiroshi.la.coocan.jp/";
@@ -23,6 +26,10 @@ chrome.storage.local.get(['key'], function(result) {
   console.log('Value currently is ' + result.key);
 });
 const saveTab = chrome.storage.local.get(['key']);
+const savePromise = Promise.resolve(saveTab);
+savePromise.then(function(v) {
+    console.log(v.key);
+})
 
 /*    
 chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
