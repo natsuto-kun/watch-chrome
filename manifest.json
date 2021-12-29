@@ -3,7 +3,6 @@
     "name": "cannnot look chrome",
     "short_name": "cannnot look chrome",
     "version": "0.0.1",
-
     "action": {
         "default_icon": "public/assets/favicon-sample.png",
         "default_title": "sample popup",
@@ -13,11 +12,14 @@
     "icons": {
         "16": "public/assets/favicon-sample.png"
     },
-    "permissions": ["tabs", "activeTab"],
+    "permissions": ["tabs", "activeTab", "storage"],
     "content_scripts": [
         {
-            "matches": ["https://twitter.com/*"],
-            "js": ["./src/content.js"]
+            "matches": ["https://*/*", "http://*/*"],
+            "js": ["src/content.js"]
         }
-    ]
+    ],
+    "background": {
+        "service_worker": "src/background.js"
+    }
 }
