@@ -26,10 +26,11 @@ chrome.storage.local.get(['key'], function(result) {
   console.log('Value currently is ' + result.key);
 });
 const saveTab = chrome.storage.local.get(['key']);
-const savePromise = Promise.resolve(saveTab);
-savePromise.then(function(v) {
-    console.log(v.key);
-})
+const saved = await Promise.resolve(saveTab);
+console.log(saved.key)
+// savePromise.then(function(v) {
+//     console.log(v.key);
+// })
 
 /*    
 chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
