@@ -23,6 +23,6 @@ module.exports = {
         extensions: [".ts", ".js"],
     },
     plugins: [
-        new CopyWebpackPlugin({patterns: [{ from: "src", to: "../" }]})
+        new CopyWebpackPlugin({patterns: [{ from: "dist", to: "../" }]})
     ],
 };
