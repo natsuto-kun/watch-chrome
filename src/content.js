@@ -1,3 +1,5 @@
-if(!alert("You Don't Look!")) {
-    location.href = "http://abehiroshi.la.coocan.jp/";
-}
+console.log("this is content")
+
+chrome.storage.local.get(['key'], function(result) {
+  console.log('Value currently is ' + result.key);
+});

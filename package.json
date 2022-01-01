@@ -3,6 +3,7 @@
     "webextension-polyfill-ts": "^0.26.0"
   },
   "devDependencies": {
+    "@types/chrome": "^0.0.174",
     "@types/copy-webpack-plugin": "^10.1.0",
     "@types/webpack": "^5.28.0",
     "copy-webpack-plugin": "^10.2.0",
@@ -16,8 +17,14 @@
   "name": "watch-chrome",
   "version": "1.0.0",
   "description": "This is a Chrome extension that disables the display of pages with a specified URL.",
-  "main": "popup.ts",
+  "main": "popup.js",
   "repository": "https://github.com/natsuto-kun/watch-chrome.git",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "create": "rm -rf dist && npx webpack --mode production"
+  }
 }
