@@ -16,14 +16,3 @@ async function localUrlData() {
 window.addEventListener('load', () => {
     localUrlData()
 })
-
-/*
-chrome.tabs.query({active: true, currentWindow: true}, aim_message);
-export function aim_message(tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, tabs.url, callback);
-    return tabs.url;
-}
-function callback(text) {
-    alert(text);
-}
-*/

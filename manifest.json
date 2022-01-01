@@ -12,7 +12,7 @@
     "icons": {
         "16": "public/assets/favicon-sample.png"
     },
-    "permissions": ["tabs", "activeTab", "storage"],
+    "permissions": ["tabs", "activeTab", "storage", "contexMenus"],
     "content_scripts": [
         {
             "matches": ["https://*/*", "http://*/*"],
