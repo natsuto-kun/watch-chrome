@@ -1,24 +1,24 @@
-"use strict";
+"use strict"
 chrome.runtime.onMessage.addListener(function (request, sendResponse) {
-    console.log("this is recieve background");
-    sendResponse("uooo");
-    console.log(request);
-    console.log(request.tab);
-    console.log(saveTab);
-    const checkTab = request.tab;
-    if (saveTab === checkTab) {
-        console.log("win");
-        setTimeout(function () {
-            location.href = "http://abehiroshi.la.coocan.jp/";
-        }, 700);
-    }
-    return true;
-});
-console.log("this is background");
-chrome.storage.local.get(['key'], function (result) {
-    console.log('Value currently is ' + result.key);
-});
-const saveTab = chrome.storage.local.get(['key']);
+  console.log("this is recieve background")
+  sendResponse("uooo")
+  console.log(request)
+  console.log(request.tab)
+  console.log(saveTab)
+  const checkTab = request.tab
+  if (saveTab === checkTab) {
+    console.log("win")
+    setTimeout(function () {
+      location.href = "http://abehiroshi.la.coocan.jp/"
+    }, 700)
+  }
+  return true
+})
+console.log("this is background")
+chrome.storage.local.get(["key"], function (result) {
+  console.log("Value currently is " + result.key)
+})
+const saveTab = chrome.storage.local.get(["key"])
 // const saved = await Promise.resolve(saveTab);
 // console.log(saved.key)
 // savePromise.then(function(v) {
